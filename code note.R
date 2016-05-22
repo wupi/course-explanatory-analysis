@@ -21,3 +21,12 @@ barplot(table(pollution$region) , main = "number of stats in region")
 #scatter plot
 with(pollution, plot(latitude, pm25))
 with(pollution, plot(latitude, pm25, col = region))
+legend("topright", col = c("blue", "red"), legend = unique(pollution$region), pch = 1)
+
+#export it to a pdf
+pdf(file = "./course-explanatory-analysis/xxx.pdf")
+#generate graph here
+dev.off()
+#or
+dev.copy2pdf(, file = './course-explanatory-analysis/xxx.pdf')
+
