@@ -30,3 +30,12 @@ dev.off()
 #or
 dev.copy2pdf(, file = './course-explanatory-analysis/xxx.pdf')
 
+## ggplot2
+# scattor plot by cat
+library("ggplot2")
+qplot(displ, hwy, data = mpg, color = drv) + geom_smooth(method = method)  #method can be default
+#histgram by cat
+qplot(hwy, data = mpg, fill = drv)
+qplot(hwy, data = mpg, facets = drv~.)
+
+
