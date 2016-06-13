@@ -40,4 +40,5 @@ qplot(displ, hwy, data = mpg, color = drv) + geom_smooth(method = method)  #meth
 qplot(hwy, data = mpg, fill = drv)
 qplot(hwy, data = mpg, facets = drv~.)
 
-
+#connect dots
+segments(x1, y1, x2, y2)
