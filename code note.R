@@ -22,6 +22,8 @@ barplot(table(pollution$region) , main = "number of stats in region")
 with(pollution, plot(latitude, pm25))
 with(pollution, plot(latitude, pm25, col = region))
 legend("topright", col = c("blue", "red"), legend = unique(pollution$region), pch = 1)
+#use the same range for different chart
+rng <- range(xxx, ooo, na.rm = TRUE)
 
 #export it to a pdf
 pdf(file = "./course-explanatory-analysis/xxx.pdf")
